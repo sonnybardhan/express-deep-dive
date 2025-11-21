@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<title>Ajax</title>
+</head>
+<body>
+	<h1>Hello from AJAX</h1>
+	
+	<script>
+		const x = 1;
+		console.log('x:', x)
+		const req = $.ajax({
+			method: 'POST',
+			url: 'http://localhost:3000/ajax',
+			dataType: 'json',
+			data: {
+				name: 'sonny'
+			}
+		})
+
+		req.then((res) => {
+			console.log('res', res)
+		})
+
+// 		fetch('http://localhost:3000/ajax', {
+//     method: 'POST',
+//     hedaers: 'application/json',
+//     body: {name: 'crimson tide'}
+// }).then(data => {
+// 	console.log('data', data.json())
+// })
+
+	</script>
+</body>
+</html>

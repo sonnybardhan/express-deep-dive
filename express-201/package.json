@@ -1,0 +1,19 @@
+{
+  "name": "express-201",
+  "version": "1.0.0",
+  "description": "",
+  "main": "appUse.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Abhirup Bardhan <bardhan.abhirup@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "handlebars": "^4.7.8",
+    "helmet": "^8.1.0",
+    "pug": "^3.0.3"
+  }
+}
