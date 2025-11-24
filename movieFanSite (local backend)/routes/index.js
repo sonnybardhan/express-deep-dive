@@ -2,24 +2,23 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 
-// const apiKey = 123456789;
-// const apiBaseUrl = 'http://localhost:3030';
-// const nowPlayingUrl = `${apiBaseUrl}/movie/most_popular?api_key=${apiKey}`;
+const apiKey = 123456789;
+const apiBaseUrl = 'http://localhost:3030';
+const nowPlayingUrl = `${apiBaseUrl}/movie/most_popular?api_key=${apiKey}`;
 
-const apiKey = `424f14249d7ed6721e1d3fbd1d00fba2`;
-const apiBaseUrl = 'http://api.themoviedb.org/3';
-const nowPlayingUrl = `${apiBaseUrl}/movie/now_playing?api_key=${apiKey}`;
+// const apiKey = `424f14249d7ed6721e1d3fbd1d00fba2`;
+// const apiBaseUrl = 'http://api.themoviedb.org/3';
+// const nowPlayingUrl = `${apiBaseUrl}/movie/now_playing?api_key=${apiKey}`;
 const imageBaseUrl = 'http://image.tmdb.org/t/p/w300';
 
 router.use((req, res, next) => {
   res.locals.imageBaseUrl = imageBaseUrl;
   next();
 });
-
 /* GET home page. */
 router.get('/', async function (req, res, next) {
   // res.render('index', {});
-  
+
   const response = await axios.get(nowPlayingUrl);
   // console.log(response);
   // res.json(response);
